@@ -8,6 +8,8 @@ import Card from 'react-bootstrap/Card';
 import './modal-row-add.css';
 import SelectSearch from 'react-select-search';
 import { options } from '../data/data';
+import Row from 'react-bootstrap/Row';
+
 
 
 export default class ModalRowAdd extends React.Component {
@@ -98,16 +100,16 @@ export default class ModalRowAdd extends React.Component {
                                 <Card.Img style={{ height: '150px', width: '150px' }} variant="top" src="https://www.imgonline.com.ua/examples/bee-on-daisy.jpg" />
                                 <Card.Body>
                                     <Form.Label>Отдел</Form.Label>
-
-                                    <SelectSearch
-                                        value={`${department}`}
-                                        name="department"
-                                        options={options}
-                                        search
-                                        placeholder="Подразделение"
-                                        onChange={this.handleChangeSelect}
-                                    />
-
+                                    <Row>
+                                        <SelectSearch
+                                            value={`${department}`}
+                                            name="department"
+                                            options={options}
+                                            search
+                                            placeholder="Подразделение"
+                                            onChange={this.handleChangeSelect}
+                                        />
+                                    </Row>
                                     <FormControl
                                         type='text'
                                         hidden

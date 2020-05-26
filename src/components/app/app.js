@@ -2,13 +2,17 @@ import React, { Component } from 'react';
 import DataTable from 'react-data-table-component';
 import Button from 'react-bootstrap/Button';
 import FormControl from 'react-bootstrap/FormControl';
+import Row from 'react-bootstrap/Row';
 import ModalRowAdd from '../modal-row-add/modal-row-add';
 import './app.css';
 import { BsFillTrashFill } from "react-icons/bs";
 import { BsPencilSquare } from "react-icons/bs";
 import { options } from '../data/data';
+import Container from 'react-bootstrap/Container';
+import Col from 'react-bootstrap/Col';
 
 let id_count = 37;
+
 
 export default class DataTeblePhoneNumber extends Component {
 
@@ -62,7 +66,7 @@ export default class DataTeblePhoneNumber extends Component {
                     fontSize: '14px',
                     fontWeight: 500
                 },
-                width: '300px',
+                hide: 'sm',
                 cell: ({ department }) => {
                     const item = options.filter((el) => el.value === department);
                     return item[0].name
@@ -83,6 +87,7 @@ export default class DataTeblePhoneNumber extends Component {
                 name: 'Должность',
                 selector: 'position',
                 sortable: true,
+                hide: 'sm',
                 style: {
                     color: '#202124',
                     fontSize: '14px',
@@ -93,7 +98,6 @@ export default class DataTeblePhoneNumber extends Component {
                 name: 'Телефон',
                 selector: 'telefon_number',
                 sortable: true,
-                width: '350px',
                 style: {
                     color: '#202124',
                     fontSize: '14px',
@@ -104,6 +108,7 @@ export default class DataTeblePhoneNumber extends Component {
                 name: 'buttons',
                 id: 'edit',
                 width: '150px',
+                hide: 'sm',
                 cell: ({ id }) =>
                     <>
 
@@ -252,8 +257,6 @@ export default class DataTeblePhoneNumber extends Component {
         });
     };
 
-
-
     render() {
         const { data, columns, tern, show, itemModal } = this.state;
         const visibalItems = this.search(data, tern);
@@ -270,22 +273,27 @@ export default class DataTeblePhoneNumber extends Component {
         };
 
         return (
-            <div>
-                <div className="d-flex mb-3 ml-2">
-                    <div className="mr-auto p-2 ">
-                        <Button className='mr-auto p-2' onClick={this.openMod}>Создать</Button>
-                    </div>
-                    <div className="p-2 w-25">
-                        <FormControl
-                            placeholder='поиск'
-                            value={tern}
-                            onChange={this.handleChange}
-                        />
-                    </div>
-                </div>
+            <Container fluid>
+                {/* <div className="d-flex mb-3 ml-2"> */}
+                <Row>
+                    <Col xs="4" md="8">
+                        <div className="mr-auto p-2 ">
+                            <Button className='mr-auto p-2' onClick={this.openMod}>Создать</Button>
+                        </div>
+                    </Col>
+                    <Col xs="8" md="4">
+                        <div className="p-2">
+                            <FormControl
+                                placeholder='поиск'
+                                value={tern}
+                                onChange={this.handleChange}
+                            />
+                        </div>
+                    </Col>
+                </Row>
                 <DataTableDB />
                 <ModalRowAdd show={show} item={itemModal} onClose={this.close} onAdd={this.add} />
-            </div>
+            </Container>
         )
     }
 };
