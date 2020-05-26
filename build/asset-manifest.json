@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/data-table-phone/static/css/main.816b3787.chunk.css",
+    "main.js": "/data-table-phone/static/js/main.d8649f9e.chunk.js",
+    "main.js.map": "/data-table-phone/static/js/main.d8649f9e.chunk.js.map",
+    "runtime-main.js": "/data-table-phone/static/js/runtime-main.19e77a18.js",
+    "runtime-main.js.map": "/data-table-phone/static/js/runtime-main.19e77a18.js.map",
+    "static/css/2.af3c1da9.chunk.css": "/data-table-phone/static/css/2.af3c1da9.chunk.css",
+    "static/js/2.96e0b4c2.chunk.js": "/data-table-phone/static/js/2.96e0b4c2.chunk.js",
+    "static/js/2.96e0b4c2.chunk.js.map": "/data-table-phone/static/js/2.96e0b4c2.chunk.js.map",
+    "index.html": "/data-table-phone/index.html",
+    "precache-manifest.9afab0579717d02bfee4c9e6f312e168.js": "/data-table-phone/precache-manifest.9afab0579717d02bfee4c9e6f312e168.js",
+    "service-worker.js": "/data-table-phone/service-worker.js",
+    "static/css/2.af3c1da9.chunk.css.map": "/data-table-phone/static/css/2.af3c1da9.chunk.css.map",
+    "static/css/main.816b3787.chunk.css.map": "/data-table-phone/static/css/main.816b3787.chunk.css.map",
+    "static/js/2.96e0b4c2.chunk.js.LICENSE.txt": "/data-table-phone/static/js/2.96e0b4c2.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.19e77a18.js",
+    "static/css/2.af3c1da9.chunk.css",
+    "static/js/2.96e0b4c2.chunk.js",
+    "static/css/main.816b3787.chunk.css",
+    "static/js/main.d8649f9e.chunk.js"
+  ]
+}
